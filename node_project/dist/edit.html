@@ -1,0 +1,152 @@
+ <!DOCTYPE html>
+ <html lang="en">
+
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href=" 
+    https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css 
+    " rel="stylesheet">
+     <title>Edit</title>
+     <!-- <link rel="stylesheet" href="output.css"> -->
+      <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+     <style>
+         .sidebar-sticky {
+             height: calc(100vh - 48px);
+             overflow-x: hidden;
+             overflow-y: auto;
+         }
+     </style>
+ </head>
+
+ <!-- <body> -->
+
+ <body class="bg-white h-screen flex">
+     <!-- Sidebar -->
+     <div class="fixed top-0 bottom-0 left-0 w-64 bg-white shadow-md p-4">
+         <div class="sidebar-sticky">
+             <header class="bg-gray-900 text-white p-4 shadow-md flex justify-between items-center">
+                 <div class="font-medium text-lg">
+                    NodeJs
+                 </div>
+             </header>
+             <div>
+                 <a href="dash.html"
+                     class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-200 hover:text-blue-600">
+                     <span class="text-gray-700">
+                        <i class="ri-home-wifi-line"></i>
+                        Dashboard</span>
+                 </a>
+             </div>
+             <div>
+                 <a href="about.html"
+                     class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-200 hover:text-blue-600">
+                     <span class=" text-gray-700">
+                        <i class="ri-questionnaire-line"></i>
+                        About</span>
+                 </a>
+             </div>
+         </div>
+     </div>
+     
+     <!-- Main content -->
+     <div class="flex-1 ml-64 p-4">
+         <!-- Header -->
+         <!-- search in header -->
+         <div class="relative mr-28">
+             <input type="text"
+                 class="w-full pl-10 pr-4 py-2 border text-black font-semibold bg-gray-500 p-2 px-10 flex mb-2 mr-10
+              focus:bg-white placeholder-gray-600" placeholder="Search...">
+         </div>
+         <!-- ///////////////// -->
+
+              <!-- ///////////////// -->
+              <div class="justify-between flex flex-row">
+
+                  <h1 class="text-5xl font-bold text-gray-900 mb-3 pb-2 pt-3 items-center justify-between">Editing</h1>
+              </div>
+              <hr>
+              <div class="justify-between flex flex-row pt-5 ">
+                  <h1 class="text-1xl text-gray-900 mb-3 pb-2 pt-3 items-center justify-between">
+                      <a href="dash.html" class="text-blue-600 underline">Dashboard</a> / 
+                      <!-- المفروض هنا الاسم اللى واقف عليه  -->
+                  </h1>
+                   <h1 class="text-black text-1xl">
+                       LastUpdate: 
+                        <!-- <h2> Date </h2>  .> هنا الوقت -->
+                   </h1>
+                  <h1 class="text-black text-1xl">
+                      UserId:
+                       <!-- <h2> Date </h2>  .> هنا الوقت -->
+                  </h1>
+              </div>
+              <br>
+
+                   <!-- Add user form  -->
+                   <form action="" method="post" class="px-4 rounded w-full my-18 inputs space-y-6">
+
+                       <div class="flex space-x-4">
+                           <div class="w-1/2">
+                               <label for="firstname" class="text-2xl font-semibold">First Name </label>
+                               <br>
+                               <input class="border border-gray-400 px-4 py-2 rounded w-full focus:outline-none
+                 focus:border-blue-500 " type="text" name="firstname" id="firstname" required
+                                   placeholder="First Name" />
+                               <!-- focus: shadow-lg focus:shadow-blue-600      مش شغال  -->
+                           </div>
+                           <div class="w-1/2 space-x-4">
+                               <label for="lastname" class="text-2xl font-semibold">Last Name</label>
+                               <br>
+                               <input class="border border-gray-400 px-4 py-2 rounded w-full focus:outline-none
+                 focus:border-blue-500" type="text" name="lastname" id="lastname" required placeholder="Last Name" />
+                           </div>
+                       </div>
+                       <br>
+                       <!-- //////////////////////////////////// -->
+                       <div class="flex space-x-4">
+                           <div class="w-1/2">
+                               <label for="tel" class="text-2xl font-semibold">Telephone</label>
+                               <br>
+                               <input class="border border-gray-400 px-4 py-2 rounded w-full focus:outline-none
+         focus:border-blue-500" type="text" name="tel" id="tel" required placeholder="Telephone" />
+                           </div>
+                           <div class="w-1/2">
+                               <label for="email" class="text-2xl font-semibold">Email</label>
+                               <br>
+                               <input class="border border-gray-400 px-4 py-2 rounded w-full focus:outline-none
+         focus:border-blue-500" type="email" name="email" id="email" required placeholder="Email" />
+                           </div>
+                       </div>
+                       <br>
+                       <div>
+                           <!-- div for textarea  -->
+                           <label for="customerDetails" class="block text-2xl font-semibold">Customer Details</label>
+                           <br>
+                           <textarea id="customerDetails" name="customerDetails" rows="4" class="mt-1 p-2 w-full 
+             rounded-md border-blue-600 focus:ring
+               focus:border-blue-600 placeholder:text-gray-600" required placeholder="Customer Details">
+
+            </textarea>
+                       </div>
+                       <!-- //// Buttons update & Delete ///// -->
+                        <div class="w-1/2 flex space-x-4">
+                            <!-- update button  -->
+                            <div class="px-4 py-2 w-1/2 bg-blue-600 text-2xl text-white rounded-md hover:bg-blue-800">
+                                <button type="submit">
+                                   Update Customer
+                                </button>
+                            </div>
+                                    <!-- delete button  -->
+                            <div class="px-4 py-2 w-1/2 bg-red-600 text-2xl text-white rounded-md hover:bg-red-800">
+                                <button type="submit">
+                                    Delete Customer
+                                </button>
+                            </div>
+                           
+                        </div>
+
+                   </form>
+                   </div>
+                   </body>
+
+                   </html>
